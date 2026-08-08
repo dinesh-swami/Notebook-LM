@@ -26,3 +26,5 @@ export async function requireAuth(
   req.session = session;
   next();
 }
+
+import { asyncHandler } from "../utils/async-handler.js";
