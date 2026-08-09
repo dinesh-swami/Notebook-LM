@@ -12,7 +12,7 @@ app.use(
   cors({
     origin: clientUrl,
     credentials: true,
-  }),
+  }), 
 );
 
 app.all("/api/auth/{*any}", toNodeHandler(auth));
