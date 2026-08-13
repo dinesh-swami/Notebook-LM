@@ -12,7 +12,6 @@ export const chatBodySchema = z.object({
   model: z.enum(CHAT_MODELS).optional(),
   webSearch: z.boolean().optional(),
 });
-
 export type ChatBody = z.infer<typeof chatBodySchema>;
 
 export const createConversationSchema = z.object({
@@ -20,3 +19,4 @@ export const createConversationSchema = z.object({
 });
 
 export type CreateConversationInput = z.infer<typeof createConversationSchema>;
+
