@@ -17,7 +17,7 @@ import {
   ImportYoutubeInput,
   ListSourcesQuery,
 } from "../validators/source.validator.js";
-import { getWorkspaceByIdForUser } from "./workspace.services.js";
+import { getWorkspaceByIdForUser } from "./workspace.service.js";
 
 async function assertWorkspaceAccess(workspaceId: string, userId: string) {
   await getWorkspaceByIdForUser(workspaceId, userId);

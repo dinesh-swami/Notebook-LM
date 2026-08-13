@@ -10,12 +10,13 @@ export const conversationSelect = {
   summarizedAt: true,
   createdAt: true,
   updatedAt: true,
-};
-export type conversationRecord = Prisma.ConversationGetPayload<{
+} as const;
+
+export type ConversationRecord = Prisma.ConversationGetPayload<{
   select: typeof conversationSelect;
 }>;
 
-export function findConversationByWorkspaceId(workspaceId: string) {
+export function findConversationsByWorkspaceId(workspaceId: string) {
   return prisma.conversation.findMany({
     where: { workspaceId },
     select: conversationSelect,
@@ -78,6 +79,7 @@ export function updateConversationRecord(
     select: conversationSelect,
   });
 }
+
 export function touchConversation(conversationId: string) {
   return prisma.conversation.update({
     where: { id: conversationId },

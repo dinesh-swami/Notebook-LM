@@ -5,7 +5,7 @@ import {
   getWorkspaceByIdForUser,
   listWorkspacesByUser,
   updateWorkspaceForUser,
-} from "../services/workspace.services.js";
+} from "../services/workspace.service.js";
 import { ValidationError } from "../types/app-error.js";
 import { getZodFieldErrors } from "../utils/zod-error.js";
 import {
