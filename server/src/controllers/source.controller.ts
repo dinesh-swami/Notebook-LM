@@ -19,7 +19,7 @@ import {
   importYoutubeSource,
   listSourcesForWorkspace,
   uploadPdfSource,
-} from "../services/source.services.js";
+} from "../services/source.service.js";
 
 function parseWorkspaceId(params: Request["params"]) {
   const parsed = workspaceIdParamSchema.safeParse(params);
